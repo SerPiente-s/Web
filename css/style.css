@@ -317,3 +317,55 @@ footer {
         gap: 15px;
     }
 }
+
+
+/* =========================================
+   ASSIGNMENT #3: Media Queries (Part 1)
+   ========================================= */
+
+/* Task 1: Responsive Typography */
+h1, h2, h3 { font-size: 1.5rem; }
+p, a, li { font-size: 0.9rem; }
+
+@media (min-width: 768px) {
+    h1, h2, h3 { font-size: 1.8rem; }
+    p, a, li { font-size: 1rem; }
+}
+
+@media (min-width: 992px) {
+    h1, h2, h3 { font-size: 2.2rem; }
+    p, a, li { font-size: 1.1rem; }
+}
+
+/* Task 2: Card Group (Pure CSS Media Queries) */
+.card-row-container {
+    display: flex;
+    flex-wrap: wrap; /* Позволяет карточкам переноситься на новую строку */
+    gap: 20px;
+}
+
+.flex-card {
+    /* Mobile: 1 колонка */
+    width: 100%; 
+}
+
+@media (min-width: 768px) {
+    .flex-card {
+        /* Tablet: 2 колонки (50% минус половина gap) */
+        width: calc(50% - 10px);
+    }
+}
+
+@media (min-width: 1024px) {
+    .flex-card {
+        /* Desktop: 3 колонки (33.3% минус gap) */
+        width: calc(33.333% - 14px);
+    }
+}
+
+/* Корректировка Bootstrap карточек под темную тему сайта */
+.bg-dark-custom {
+    background-color: #1a1a2e !important;
+    border: 1px solid #0f3460;
+}
+.text-green { color: #69E799 !important; }

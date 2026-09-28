@@ -4,29 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Deadlock Wiki - Home</title>
+    <!-- Подключение Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <!-- Grid Container wrapping the site structure -->
     <div class="site-container">
 
-        <!-- Flexbox Header (Logo Left + Links Right) -->
-        <header id="main-header">
-            <div class="header-logo">
-                <img src="https://deadlock.wiki/images/a/a5/Mina_card.png" alt="Deadlock Logo">
-                <span>Deadlock Wiki</span>
+        <!-- Task 5 & 10: Bootstrap Navigation Bar -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark-custom rounded p-3" style="grid-area: header;">
+            <div class="container-fluid">
+                <a class="navbar-brand d-flex align-items-center gap-2 text-green fw-bold" href="index.html">
+                    <img src="https://deadlock.wiki/images/a/a5/Mina_card.png" alt="Logo" height="40">
+                    Deadlock Wiki
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav gap-3">
+                        <li class="nav-item"><a class="nav-link text-white" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="characters.html">Characters</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="apollo.html">Apollo</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="paradox.html">Paradox</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="feedback.html">Feedback</a></li>
+                    </ul>
+                </div>
             </div>
-            <nav class="nav-menu">
-                <a href="index.html">Home</a>
-                <a href="characters.html">Characters</a>
-                <a href="apollo.html">Apollo</a>
-                <a href="paradox.html">Paradox</a>
-                <a href="feedback.html">Feedback</a>
-            </nav>
-        </header>
+        </nav>
 
-        <!-- Grid Area Sidebar -->
         <aside class="sidebar">
             <h3>Page Navigation</h3>
             <ul>
@@ -37,126 +44,115 @@
             </ul>
             <hr style="border-color: #0f3460; margin: 20px 0;">
             <h3>Latest Updates</h3>
-            <p style="font-size: 0.85rem;">New hero guides added for Apollo and Paradox! Check feedback section to contribute.</p>
+            <p>New hero guides added!</p>
         </aside>
 
-        <!-- Grid Area Main Content -->
+        <!-- Task 4: Bootstrap Spacing Utilities (p-4, mb-4, etc.) -->
         <main class="main-content">
             
-            <section id="welcome" class="card">
-                <h2>Welcome to the Deadlock Wiki</h2>
-                <p>Deadlock is an upcoming 6v6 hero shooter game developed by Valve. It combines fast-paced shooter mechanics with deep strategic MOBA elements, featuring dynamic heroes and lane-based combat.</p>
-                
-                <h3>Core Game Features</h3>
-                <ul>
-                    <li>Strategic 6v6 tactical team engagements</li>
-                    <li>Skyrail network for quick map traversal</li>
-                    <li>In-match item economy and ability upgrades</li>
-                    <li>Diverse hero roster with distinct playstyles</li>
-                </ul>
-
-                <img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExcno2NTN6ZTB4M2s2aHcwcmx2b3I0MThpc3oyb3dscnY0bTNoazNhaSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/zudVphGuW4loBNWbG4/giphy.gif" alt="Deadlock Gameplay Overview" class="content-img">
+            <section id="welcome" class="bg-dark-custom rounded p-4 mb-4 shadow">
+                <h2 class="text-green">Welcome to the Deadlock Wiki</h2>
+                <p>Deadlock is an upcoming 6v6 hero shooter game developed by Valve...</p>
             </section>
 
-            <!-- Flexbox Cards Section -->
-            <section id="featured-heroes" class="card">
-                <h2>Featured Roster</h2>
-                <p>Explore some of the prominent heroes in Deadlock:</p>
-                
+            <!-- Task 2: Pure CSS Card Group (NO Bootstrap Grid here) -->
+            <section id="featured-heroes" class="bg-dark-custom rounded p-4 mb-4 shadow">
+                <h2 class="text-green">Featured Roster (Task 2: CSS Media Queries)</h2>
                 <div class="card-row-container">
                     <div class="flex-card">
                         <img src="https://deadlock.wiki/images/0/0f/Apollo_card.png" alt="Apollo">
                         <h4>Apollo</h4>
-                        <p>Prince of Ixia and highly skilled fencer with high mobility and rapier strikes.</p>
-                        <a href="apollo.html" class="card-btn">Read Lore</a>
+                        <p>Prince of Ixia and highly skilled fencer.</p>
                     </div>
-
                     <div class="flex-card">
                         <img src="https://deadlock.wiki/images/0/08/Paradox_card.png" alt="Paradox">
                         <h4>Paradox</h4>
-                        <p>Master thief capable of manipulating time, freezing foes, and swapping positions.</p>
-                        <a href="paradox.html" class="card-btn">Read Lore</a>
+                        <p>Master thief capable of manipulating time.</p>
                     </div>
-
                     <div class="flex-card">
                         <img src="https://deadlock.wiki/images/8/85/Wraith_card.png" alt="Wraith">
                         <h4>Wraith</h4>
-                        <p>High-damage duelist specializing in single-target burst and rapid gunplay.</p>
-                        <a href="characters.html" class="card-btn">View Stats</a>
+                        <p>High-damage duelist specializing in rapid gunplay.</p>
                     </div>
                 </div>
             </section>
 
-            <!-- Image Gallery -->
-            <section id="hero-gallery" class="card">
-                <h2>Hero Snapshots Gallery</h2>
-                <p>Hover over any image to view details:</p>
+            <!-- Task 7: Bootstrap Carousel (9 images) -->
+            <section id="hero-gallery" class="bg-dark-custom rounded p-4 mb-4 shadow">
+                <h2 class="text-green mb-3">Hero Gallery Carousel</h2>
+                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="6"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="7"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="8"></button>
+                    </div>
+                    <div class="carousel-inner rounded" style="max-height: 500px;">
+                        <div class="carousel-item active"><img src="https://deadlock.wiki/images/0/0f/Apollo_card.png" class="d-block w-100 object-fit-cover" style="height: 500px;" alt="Apollo"></div>
+                        <div class="carousel-item"><img src="https://deadlock.wiki/images/0/08/Paradox_card.png" class="d-block w-100 object-fit-cover" style="height: 500px;" alt="Paradox"></div>
+                        <div class="carousel-item"><img src="https://deadlock.wiki/images/8/85/Wraith_card.png" class="d-block w-100 object-fit-cover" style="height: 500px;" alt="Wraith"></div>
+                        <div class="carousel-item"><img src="https://media1.tenor.com/m/4LuzGWFWoXIAAAAC/deadlock-valve-rem-deadlock-valve-apollo.gif" class="d-block w-100 object-fit-cover" style="height: 500px;" alt="Apollo Combat"></div>
+                        <div class="carousel-item"><img src="https://media1.tenor.com/m/nnmZL1YzI6cAAAAd/deadlock-paradox.gif" class="d-block w-100 object-fit-cover" style="height: 500px;" alt="Paradox Swap"></div>
+                        <div class="carousel-item"><img src="https://preview.redd.it/bioshock-style-sky-rail-guards-have-been-removed-opting-for-v0-tcio14kiq2fg1.jpg?width=1080&crop=smart&auto=webp&s=3dd9c41374547551bb95cba4e919bf19cb7da959" class="d-block w-100 object-fit-cover" style="height: 500px;" alt="Skyrails"></div>
+                        <div class="carousel-item"><img src="https://deadlock.wiki/images/6/6b/Infernus_card.png" class="d-block w-100 object-fit-cover" style="height: 500px;" alt="Infernus"></div>
+                        <div class="carousel-item"><img src="https://deadlock.wiki/images/9/90/Celeste_card.png" class="d-block w-100 object-fit-cover" style="height: 500px;" alt="Celeste"></div>
+                        <div class="carousel-item"><img src="https://deadlock.wiki/images/a/a1/Mo_%26_Krill_card.png" class="d-block w-100 object-fit-cover" style="height: 500px;" alt="Mo & Krill"></div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </button>
+                </div>
+            </section>
+
+            <!-- Task 3: Bootstrap Grid (2 columns & 3 columns) + Task 8: Bootstrap Cards -->
+            <section id="about-us" class="container-fluid px-0">
                 
-                <div class="gallery-grid">
-                    <div class="gallery-item">
-                        <img src="https://deadlock.wiki/images/0/0f/Apollo_card.png" alt="Apollo">
-                        <div class="gallery-caption">Apollo - Duelist</div>
+                <!-- 2 Columns Layout (col-lg-6) -->
+                <div class="row mb-4">
+                    <div class="col-12 col-lg-6 mb-3 mb-lg-0">
+                        <div class="card h-100 bg-dark-custom text-white shadow">
+                            <div class="card-body">
+                                <h3 class="card-title text-green">Alizan Talov</h3>
+                                <p class="card-text"><strong>Role:</strong> Developer #1<br>Created characters and Paradox pages</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="gallery-item">
-                        <img src="https://deadlock.wiki/images/0/08/Paradox_card.png" alt="Paradox">
-                        <div class="gallery-caption">Paradox - Initiator</div>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="https://deadlock.wiki/images/8/85/Wraith_card.png" alt="Wraith">
-                        <div class="gallery-caption">Wraith - Carry</div>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="https://media1.tenor.com/m/4LuzGWFWoXIAAAAC/deadlock-valve-rem-deadlock-valve-apollo.gif" alt="Apollo Action">
-                        <div class="gallery-caption">Apollo Combat</div>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="https://media1.tenor.com/m/nnmZL1YzI6cAAAAd/deadlock-paradox.gif" alt="Paradox Action">
-                        <div class="gallery-caption">Paradox Swap</div>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="https://preview.redd.it/bioshock-style-sky-rail-guards-have-been-removed-opting-for-v0-tcio14kiq2fg1.jpg?width=1080&crop=smart&auto=webp&s=3dd9c41374547551bb95cba4e919bf19cb7da959" alt="Skyrails">
-                        <div class="gallery-caption">Skyrail Transit</div>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="https://deadlock.wiki/images/6/6b/Infernus_card.png" alt="Infernus">
-                        <div class="gallery-caption">Infernus - Bruiser</div>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="https://deadlock.wiki/images/9/90/Celeste_card.png" alt="Celeste">
-                        <div class="gallery-caption">Celeste - Tank</div>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="https://deadlock.wiki/images/a/a1/Mo_%26_Krill_card.png" alt="Mo & Krill">
-                        <div class="gallery-caption">Mo & Krill - Tank</div>
+                    <div class="col-12 col-lg-6">
+                        <div class="card h-100 bg-dark-custom text-white shadow">
+                            <div class="card-body">
+                                <h3 class="card-title text-green">Ruslan Suleimen</h3>
+                                <p class="card-text"><strong>Role:</strong> Developer #2<br>Created home and Apollo pages</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </section>
 
-            <section id="about-us" class="card">
-                <h2>About Us</h2>
-                <p>Welcome to our Deadlock Wiki project</p>
-
-                <div class="bio-block">
-                    <h3>Alizan Talov</h3>
-                    <p><strong>Role:</strong> Developer #1</p>
-                    <p>Created characters and Paradox pages</p>
+                <!-- 3 Columns Layout (col-lg-4) -->
+                <div class="row">
+                    <div class="col-12 col-md-4 mb-3 mb-md-0"><div class="card bg-dark-custom text-white p-3 border-success">Wiki Stat 1</div></div>
+                    <div class="col-12 col-md-4 mb-3 mb-md-0"><div class="card bg-dark-custom text-white p-3 border-success">Wiki Stat 2</div></div>
+                    <div class="col-12 col-md-4"><div class="card bg-dark-custom text-white p-3 border-success">Wiki Stat 3</div></div>
                 </div>
 
-                <div class="bio-block">
-                    <h3>Ruslan Suleimen</h3>
-                    <p><strong>Role:</strong> Developer #2</p>
-                    <p>Created home and Apollo pages</p>
-                </div>
             </section>
 
         </main>
 
-        <!-- Task 3: Grid Area - Footer -->
-        <footer>
-            <p>Created by Golden Goose Egg Team: Alizan Talov & Ruslan Suleimen</p>
+        <footer class="bg-dark-custom p-3 rounded">
+            <p class="mb-0 text-center">Created by Golden Goose Egg Team: Alizan Talov & Ruslan Suleimen</p>
         </footer>
 
     </div>
-
+    
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
